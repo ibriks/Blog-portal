@@ -13,7 +13,7 @@ class DB
 	    {
 	    	try
 	    	{
-	    		// Unesi ispravni HOSTNAME, DATABASE, USERNAME i PASSWORD
+	    		// HOSTNAME and DATABASE
 		    	DB::$db = new PDO( "mysql: host=localhost:3306; dbname=test; charset=utf8");
 		    	DB::$db-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		    }

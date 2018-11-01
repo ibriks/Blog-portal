@@ -6,8 +6,7 @@ $db = DB::getConnection();
 function sendJSONandExit( $message )
 {
   // Kao izlaz skripte pošalji $message u JSON formatu i prekini izvođenje.
-  //header( 'Content-type:application/json;charset=utf-8' );
-  //echo json_encode( $message );
+
   echo json_encode($message);
   flush();
   exit( 0 );
@@ -47,14 +46,12 @@ $maxima = $row["MAX(id_posta)"] + 1;
 try
 {
 	$st = $db->prepare( 'INSERT INTO post(id_posta, id_bloga, naslov, tekst) VALUES (:id_posta, :id_bloga, :naslov, :tekst)' );
-
 	$st->execute( array( 'id_posta' => (string)$maxima, 'id_bloga' => $id_bloga, 'naslov' => $ime_posta , 'tekst' => $tekst ) );
 }
 catch( PDOException $e ) { exit( "PDO error #6: " . $e->getMessage() ); }
 
 $arr["msg"] = "Dodao post u tablicu 'post'.<br />";
 $arr["id_posta"] = (string)$maxima;
-//echo (string)$maxima;
 
 sendJSONandExit($arr);
 

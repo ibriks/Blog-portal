@@ -1,6 +1,6 @@
 <?php require_once 'view/_header.php'; ?>
 
-<?php //ispis svih kvizova ?>
+<?php //ispis svih blogova ?>
 <div class="blogovi">
 	<form method="post" action="<?php echo __SITE_URL . '/index.php?rt=blog/postovi'?>">
 	<?php

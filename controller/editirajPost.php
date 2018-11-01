@@ -6,8 +6,7 @@ $db = DB::getConnection();
 function sendJSONandExit( $message )
 {
   // Kao izlaz skripte pošalji $message u JSON formatu i prekini izvođenje.
-  //header( 'Content-type:application/json;charset=utf-8' );
-  //echo json_encode( $message );
+
   echo json_encode($message);
   flush();
   exit( 0 );
@@ -33,7 +32,6 @@ catch( PDOException $e ) { exit( 'PDO error ' . $e->getMessage() ); }
 
 $arr["msg"] = "Editirao post u tablicu 'post'.<br />";
 $arr["id_posta"] = (string)$maxima;
-//echo (string)$maxima;
 
 sendJSONandExit($arr);
 
