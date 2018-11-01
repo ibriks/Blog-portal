@@ -1,0 +1,36 @@
+
+
+.login_form{
+	text-align: center ;
+}
+
+.footer{
+	clear: both;
+	float: left;
+}
+
+
+.blogovi{
+	float: left;
+	margin: 2px 10px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+body {
+	background: #D8D8D8 !important;
+}
+
+h1 {
+	color: #3385ff;
+	font-size: 30px;
+}
+
+h2{
+	color: #b30047;
+}
+
+nav{
+	color: yellow;
+}
